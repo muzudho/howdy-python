@@ -7,7 +7,7 @@ import traceback
 import pandas as pd
 
 
-DATA_TXT_FILE_PATH = 'resources/data.csv'
+DATA_CSV_FILE_PATH = 'resources/data.csv'
 TEMPLATE_TXT_FILE_PATH = 'resources/template.txt'
 
 
@@ -18,7 +18,7 @@ if __name__ == '__main__':
         try:
                 # ファイル名の一部が入力されます
                 file_path = input(f"""\
-予め、データをCSV形式で {DATA_TXT_FILE_PATH} ファイルに書き込んで用意しています。
+予め、データをCSV形式で {DATA_CSV_FILE_PATH} ファイルに書き込んで用意しています。
 
 また、データを書き出す書式を書いた {TEMPLATE_TXT_FILE_PATH} ファイルを用意しています。
 これはテンプレートと呼びます。
@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
 
                 # データ・ファイルを読み込んで、データ・フレームにして返す
-                df = pd.read_csv(DATA_TXT_FILE_PATH, encoding="utf8")
+                df = pd.read_csv(DATA_CSV_FILE_PATH, encoding="utf8")
 
 
                 # データを１行ずつ見ていく
