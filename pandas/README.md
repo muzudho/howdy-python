@@ -27,3 +27,4 @@ python -m pip install pandas
 * 📖 [Python の例外を別の例外として投げるときの話](https://blog.serverworks.co.jp/2020/09/23/115853) - raise には from を使える
 * 📖 [pandasでExcelファイル（xlsx, xls）の書き込み（to_excel）](https://note.nkmk.me/python-pandas-to-excel/)
 * 📖 [openpyxlで別ブックにシートをコピーする](https://qiita.com/github-nakasho/items/fb9df8e423bb8784cbbd)
+* 📖 [[Python] pandas 1から始まる連番を設定した列を追加する](https://note.com/kohaku935/n/ne534a70abc8d)

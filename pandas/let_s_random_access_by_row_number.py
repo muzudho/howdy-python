@@ -43,13 +43,13 @@ A table
 
         # インデックスが消えてしまうので、 .reset_index() を使って、インデックスを列として生成します。
         # そしてマージしたあと、その列をインデックスに戻します
-        even_df = a_df.dropna(subset=['Even'])
+        a_df.dropna(subset=['Even'], inplace=True)
 
         print(f"""\
 
 A table
 -------
-{even_df}
+{a_df}
 """)
 
         enter_key = input(f"""\
@@ -62,8 +62,7 @@ Even 列に値の入っている行だけを抽出できました
 それでは、エンター・キーを打鍵してみてください
 > """)
 
-        even_df.reset_index(
-                inplace=True)   # NOTE `inplace=True` - インデックスを指定したデータフレームを戻り値として返すのではなく、このインスタンス自身を更新します
+        a_df.reset_index(inplace=True)
 
         print(f"""\
 
@@ -71,7 +70,7 @@ Even 列に値の入っている行だけを抽出できました
 
 A table
 -------
-{even_df}
+{a_df}
 """)
 
         enter_key = input(f"""\
@@ -79,14 +78,55 @@ A table
 これで、行番号でアクセスできるようになりました
 
 [1]行目、[0]行目、[2]行目の順に Even 列の値を取得してみましょう。
-それでは、エンター・キーを打鍵してみてください。
+それでは、エンター・キーを打鍵してみてください
 > """)
 
         print(f"""\
 
-[1]行目のEven {even_df.at[1,'Even']}
-[0]行目のEven {even_df.at[0,'Even']}
-[2]行目のEven {even_df.at[2,'Even']}
+[1]行目のEven {a_df.at[1,'Even']}
+[0]行目のEven {a_df.at[0,'Even']}
+[2]行目のEven {a_df.at[2,'Even']}
+
+[1]行目、[0]行目、[2]行目の順に Even 列の値を取得できました
+""")
+
+        enter_key = input(f"""\
+
+しかしこれでは、インデックスを付けたまま連番にランダムアクセスするということができません
+
+そこで、インデックスはそのままに、連番の列を新しく追加してみましょう。
+それでは、エンター・キーを打鍵してみてください
+> """)
+
+        a_df.set_index('No', inplace=True)
+
+        # EvenNo 列の追加
+        a_df['EvenNo'] = range(0, len(a_df.index))
+
+        print(f"""\
+
+A table
+-------
+{a_df}
+
+EvenNo 列を最終列に追加できました
+""")
+
+        enter_key = input(f"""\
+
+EvenNo 列を、列の左端に移動しましょう。
+それでは、エンター・キーを打鍵してみてください
+> """)
+
+        a_df = a_df[['EvenNo', 'Even', 'Odd']]
+
+        print(f"""\
+
+A table
+-------
+{a_df}
+
+EvenNo 列を、列の左端に移動できました
 """)
 
         print("おわり。")
