@@ -27,4 +27,4 @@ python -m pip install scipy
 # 目次
 
 * 📄 [テンプレートにCSVを流し込もう](let_s_fill_csv_into_the_template.py) - `python let_s_fill_csv_into_the_template.py`
-* 📄 [pandas 特集](pandas/README.md)
+* 📄 [pandas 特集](pandas/README.md) - `cd pandas`

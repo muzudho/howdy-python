@@ -2,7 +2,7 @@
 # cd pandas
 # python let_s_join.py
 #
-# pandas でテーブルを結合しよう
+# （pandas）テーブルを結合しよう
 #
 import traceback
 import datetime

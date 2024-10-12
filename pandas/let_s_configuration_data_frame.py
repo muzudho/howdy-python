@@ -2,7 +2,7 @@
 # cd pandas
 # python let_s_configuration_data_frame.py
 #
-# pandas のデータフレームを設定しよう
+# （pandas）データフレームを設定しよう
 #
 # 参考：
 # * 📖 [pandasのインデックス指定で行・列を抽出](https://note.nkmk.me/python-pandas-index-row-column/)
