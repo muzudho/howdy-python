@@ -9,6 +9,7 @@ import time
 import datetime
 import openpyxl as xl
 from openpyxl.styles import PatternFill, Font
+from openpyxl.styles.borders import Border, Side
 
 
 FILE_NAME = 'hello.xlsx'
@@ -100,9 +101,6 @@ if __name__ == '__main__':
         sheet['A1'].value = 'World'
         wb.save(FILE_NAME)
 
-        print()
-        time.sleep(MSG_SECS)
-
         print(f"Hello シートの A1 セルに World と入力して {FILE_NAME} ファイルを保存しました")
         time.sleep(MSG_SECS)
 
@@ -166,7 +164,38 @@ if __name__ == '__main__':
         print(f"{FILE_NAME} ファイルを開けて確認してみてください。")
         time.sleep(MSG_SECS)
 
-        print(f"Hello シートの A2 セルの背景に色が付いていますか？")
+        print(f"Hello シートの A3 セルに赤色の Applet という文字が入っていますか？")
+        time.sleep(MSG_SECS)
+
+
+        ############
+        # MARK: 罫線
+        ############
+
+        print()
+        time.sleep(MSG_SECS)
+
+        print("次は、 B4 セルに罫線（けいせん）を引いてみましょう")
+        time.sleep(MSG_SECS)
+
+        print(f"それでは、{FILE_NAME} ファイルを閉じ、")
+        time.sleep(MSG_SECS)
+
+        enter_key = input("エンター・キーを打鍵してみてください")
+
+        side = Side(style='thin', color='000000')
+        # style に入るもの： 'thin', 'dashDot', 'dashDotDot', 'double', 'hair', 'dotted', 'mediumDashDotDot', 'dashed', 'mediumDashed', 'slantDashDot', 'thick', 'thin', 'medium', 'mediumDashDot'
+        border = Border(top=side, bottom=side, left=side, right=side)
+        sheet['B4'].border = border
+        wb.save(FILE_NAME)
+
+        print(f"B4 セルに罫線（けいせん）を引き、 {FILE_NAME} ファイルを保存しました")
+        time.sleep(MSG_SECS)
+
+        print(f"{FILE_NAME} ファイルを開けて確認してみてください。")
+        time.sleep(MSG_SECS)
+
+        print(f"Hello シートの B4 セルに罫線（けいせん）が引かれていますか？")
         time.sleep(MSG_SECS)
 
 
