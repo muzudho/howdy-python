@@ -8,6 +8,7 @@ import traceback
 import time
 import datetime
 import openpyxl as xl
+from openpyxl.styles import PatternFill
 
 
 FILE_NAME = 'hello.xlsx'
@@ -92,6 +93,17 @@ if __name__ == '__main__':
 
         print(f"{FILE_NAME} ファイルを開けて確認してみてください。")
         time.sleep(0.2)
+
+        print("次は、 A2 セルの背景に色を付けてみましょう")
+        time.sleep(0.2)
+
+        print(f"それでは、{FILE_NAME} ファイルを閉じ、")
+        time.sleep(0.2)
+
+        enter_key = input("エンター・キーを打鍵してみてください")
+
+        sheet['A2'].fill = PatternFill(patternType='solid', fgColor='CCFFFF')
+        wb.save(FILE_NAME)
 
         print("おわり。")
 
