@@ -72,6 +72,27 @@ if __name__ == '__main__':
         print("Hello という名前のシートがあります。")
         time.sleep(0.2)
 
+        print("この Sheet シートの A1 セルに World と文字を入れてみましょう")
+        time.sleep(0.2)
+
+        print(f"それでは、{FILE_NAME} ファイルを閉じ、")
+        time.sleep(0.2)
+
+        enter_key = input("エンター・キーを打鍵してみてください")
+
+        sheet = wb['Hello']
+        sheet['A1'].value = 'World'
+        wb.save(FILE_NAME)
+
+        print()
+        time.sleep(0.2)
+
+        print(f"Hello シートの A1 セルに World と入力して {FILE_NAME} ファイルを保存しました")
+        time.sleep(0.2)
+
+        print(f"{FILE_NAME} ファイルを開けて確認してみてください。")
+        time.sleep(0.2)
+
         print("おわり。")
 
 
