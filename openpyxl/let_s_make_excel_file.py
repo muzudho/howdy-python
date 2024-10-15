@@ -97,8 +97,8 @@ if __name__ == '__main__':
 
         enter_key = input("エンター・キーを打鍵してみてください")
 
-        sheet = wb['Hello']
-        sheet['A1'].value = 'World'
+        ws = wb['Hello'] # Worksheet
+        ws['A1'].value = 'World'
         wb.save(FILE_NAME)
 
         print(f"Hello シートの A1 セルに World と入力して {FILE_NAME} ファイルを保存しました")
@@ -126,7 +126,7 @@ if __name__ == '__main__':
 
         enter_key = input("エンター・キーを打鍵してみてください")
 
-        sheet['A2'].fill = PatternFill(patternType='solid', fgColor='CCFFFF')
+        ws['A2'].fill = PatternFill(patternType='solid', fgColor='CCFFFF')
         wb.save(FILE_NAME)
 
         print(f"Hello シートの A2 セルの背景に色を付けて {FILE_NAME} ファイルを保存しました")
@@ -154,8 +154,8 @@ if __name__ == '__main__':
 
         enter_key = input("エンター・キーを打鍵してみてください")
 
-        sheet['A3'].value = 'Apple'
-        sheet['A3'].font = Font(color='FF0000')
+        ws['A3'].value = 'Apple'
+        ws['A3'].font = Font(color='FF0000')
         wb.save(FILE_NAME)
 
         print(f"Hello シートの A3 セルに Applet という文字を入力して赤色にし、 {FILE_NAME} ファイルを保存しました")
@@ -186,7 +186,7 @@ if __name__ == '__main__':
         side = Side(style='thin', color='000000')
         # style に入るもの： 'thin', 'dashDot', 'dashDotDot', 'double', 'hair', 'dotted', 'mediumDashDotDot', 'dashed', 'mediumDashed', 'slantDashDot', 'thick', 'thin', 'medium', 'mediumDashDot'
         border = Border(top=side, bottom=side, left=side, right=side)
-        sheet['B4'].border = border
+        ws['B4'].border = border
         wb.save(FILE_NAME)
 
         print(f"B4 セルに罫線（けいせん）を引き、 {FILE_NAME} ファイルを保存しました")
@@ -196,6 +196,42 @@ if __name__ == '__main__':
         time.sleep(MSG_SECS)
 
         print(f"Hello シートの B4 セルに罫線（けいせん）が引かれていますか？")
+        time.sleep(MSG_SECS)
+
+
+        ########################
+        # MARK: 列の幅、行の高さ
+        ########################
+
+        print()
+        time.sleep(MSG_SECS)
+
+        print("次は、 A, B, C 列の幅を 10, 20, 30に、 1, 2, 3 行目の行の高さを 10, 20, 30 に設定してみましょう")
+        time.sleep(MSG_SECS)
+
+        print(f"それでは、{FILE_NAME} ファイルを閉じ、")
+        time.sleep(MSG_SECS)
+
+        enter_key = input("エンター・キーを打鍵してみてください")
+
+        # width はだいたい 'ＭＳ Ｐゴシック' サイズ11 の半角英文字の個数
+        ws.column_dimensions['A'].width = 10
+        ws.column_dimensions['B'].width = 20
+        ws.column_dimensions['C'].width = 30
+
+        # height の単位はポイント。昔のアメリカ人が椅子に座ってディスプレイを見たとき 1/72 インチに見える大きさが 1ポイント らしいが、そんなんワカラン。目視確認してほしい
+        ws.row_dimensions[1].height = 10
+        ws.row_dimensions[2].height = 20
+        ws.row_dimensions[3].height = 30
+        wb.save(FILE_NAME)
+
+        print(f"A, B, C 列の幅を 10, 20, 30に、 1, 2, 3 行目の行の高さを 10, 20, 30 に設定し、 {FILE_NAME} ファイルを保存しました")
+        time.sleep(MSG_SECS)
+
+        print(f"{FILE_NAME} ファイルを開けて確認してみてください。")
+        time.sleep(MSG_SECS)
+
+        print(f"A, B, C 列の幅を 10, 20, 30に、 1, 2, 3 行目の行の高さを 10, 20, 30 になっていますか？")
         time.sleep(MSG_SECS)
 
 
