@@ -1,5 +1,5 @@
 #
-# cd openpyxl
+# cd using_openpyxl
 # python let_s_make_excel_file.py
 #
 # （pandas）エクセルファイルを作ろう
@@ -184,7 +184,7 @@ if __name__ == '__main__':
         enter_key = input("エンター・キーを打鍵してみてください")
 
         side = Side(style='thin', color='000000')
-        # style に入るもの： 'thin', 'dashDot', 'dashDotDot', 'double', 'hair', 'dotted', 'mediumDashDotDot', 'dashed', 'mediumDashed', 'slantDashDot', 'thick', 'thin', 'medium', 'mediumDashDot'
+        # style に入るもの： 'dashDot', 'dashDotDot', 'double', 'hair', 'dotted', 'mediumDashDotDot', 'dashed', 'mediumDashed', 'slantDashDot', 'thick', 'thin', 'medium', 'mediumDashDot'
         border = Border(top=side, bottom=side, left=side, right=side)
         ws['B4'].border = border
         wb.save(FILE_NAME)

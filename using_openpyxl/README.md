@@ -6,6 +6,7 @@
 * 📖 [Pythonでエクセルファイルの文字色を赤字にする方法](https://utataneblog760.com/016moji/)
 * 📖 [openpyxlで罫線を引く](https://qiita.com/github-nakasho/items/358e5602aeda81c58c81)
 * 📖 [[python] openpyxlでエクセルの行列を固定、サイズを調整する方法](https://qiita.com/junzai/items/1005efebe4e5c03765bc)
+* 📖 [openpyxlでExcelの最終行を取得する際に気を付けること](https://qiita.com/suipy/items/89dfb42c4d7388cc0f76)
 
 
 # 参考記事　＞　エクセル関連
