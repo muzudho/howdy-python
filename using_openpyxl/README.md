@@ -9,6 +9,8 @@
 * 📖 [openpyxlでExcelの最終行を取得する際に気を付けること](https://qiita.com/suipy/items/89dfb42c4d7388cc0f76)
 * 📖 [【Python】Worksheet.freeze_panes属性を使って、ウィンドウ枠の固定を行う。](https://qiita.com/rihu-do/items/d1a8696fedf9fba9e311)
 * 📖 [[Python] openpyxl で Excel を操作してみた！](https://note.crohaco.net/2017/python-openpyxl-excel/)
+* 📖 [pandasのSeriesの要素の中で最大の桁数・文字数を取得する](https://qiita.com/Maron_T/items/105966b489c110b90ebe)
+* 📖 [PythonでExcel操作～セルの結合～](https://note.com/fuusuke0716/n/nac647a619ba9)
 
 
 # 参考記事　＞　エクセル関連
