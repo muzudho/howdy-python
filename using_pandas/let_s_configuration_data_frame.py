@@ -180,7 +180,7 @@ df:
 再び、インデックスの並び順を整列しました。
 """)
 
-        print("おわり。")
+        print("おわり")
 
 
     except Exception as err:
